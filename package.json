@@ -19,5 +19,12 @@
   "homepage": "https://github.com/feeedback/backend-project-lvl1#readme",
   "bin": {
     "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1"
   }
 }
