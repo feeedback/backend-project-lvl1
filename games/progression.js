@@ -10,7 +10,7 @@ const getQuestionAndAnswer = (minNum = 0, maxNum = 20) => {
   const seriesLength = getRandomIntegerInRange(PROGRESSION_LENGTH_MIN, PROGRESSION_LENGTH_MAX)();
   const step = getRandomIntegerInRange(STEP_MIN, STEP_MAX)();
   const startNum = getRandomIntegerInRange(minNum, maxNum)();
-  const hideNumIndex = getRandomIntegerInRange(0, seriesLength)();
+  const hideNumIndex = getRandomIntegerInRange(0, seriesLength - 1)();
 
   const series = new Array(seriesLength).fill(0).map((_, i) => startNum + i * step);
 
