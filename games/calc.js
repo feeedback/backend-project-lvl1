@@ -22,8 +22,4 @@ const getCorrectAnswer = (mathExpression) => {
   return String(mapMathOperationsToFn[operation](Number(x), Number(y)));
 };
 
-export default createGame(
-  'Answer "yes" if the number is even, otherwise answer "no".',
-  getQuestionParam,
-  (num) => getCorrectAnswer(num)
-);
+export default createGame('What is the result of the expression?', getQuestionParam, getCorrectAnswer);
