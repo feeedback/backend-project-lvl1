@@ -1,6 +1,4 @@
-// import greeting from '../src/greeting.js';
 import { getRandomIntegerInRange } from '../src/utils.js';
-// import { ask } from '../src/cli.js';
 import createGame from '../src/createGame.js';
 
 const mapMathOperationsToFn = {
@@ -10,16 +8,16 @@ const mapMathOperationsToFn = {
 };
 const mathOperations = Object.keys(mapMathOperationsToFn);
 
-const getQuestionParam = (minNum = 0, maxNum = 20) => {
+const getQuestionAndAnswer = (minNum = 0, maxNum = 20) => {
   const getNum = getRandomIntegerInRange(minNum, maxNum);
   const operation = mathOperations[getRandomIntegerInRange(0, mathOperations.length - 1)()];
 
-  return `${getNum()} ${operation} ${getNum()}`;
+  const x = getNum();
+  const y = getNum();
+  return {
+    question: `${x} ${operation} ${y}`,
+    answer: String(mapMathOperationsToFn[operation](x, y)),
+  };
 };
-const getCorrectAnswer = (mathExpression) => {
-  const [x, operation, y] = mathExpression.split(' ');
 
-  return String(mapMathOperationsToFn[operation](Number(x), Number(y)));
-};
-
-export default createGame('What is the result of the expression?', getQuestionParam, getCorrectAnswer);
+export default createGame('What is the result of the expression?', getQuestionAndAnswer);

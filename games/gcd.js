@@ -1,18 +1,15 @@
 import { getRandomIntegerInRange, gcd } from '../src/utils.js';
 import createGame from '../src/createGame.js';
 
-const getQuestionParam = (minNum = 0, maxNum = 100) => {
+const getQuestionAndAnswer = (minNum = 0, maxNum = 100) => {
   const getNum = getRandomIntegerInRange(minNum, maxNum);
-  return `${getNum()} ${getNum()}`;
-};
-const getCorrectAnswer = (mathExpression) => {
-  const [x, y] = mathExpression.split(' ');
+  const x = getNum();
+  const y = getNum();
 
-  return String(gcd(Number(x), Number(y)));
+  return {
+    question: `${x} ${y}`,
+    answer: String(gcd(x, y)),
+  };
 };
 
-export default createGame(
-  'Find the greatest common divisor of given numbers.',
-  getQuestionParam,
-  getCorrectAnswer
-);
+export default createGame('Find the greatest common divisor of given numbers.', getQuestionAndAnswer);

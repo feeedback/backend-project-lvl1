@@ -1,29 +1,27 @@
 import greeting from './greeting.js';
-// import { getRandomIntegerInRange, isEven } from './utils.js';
 import { ask } from './cli.js';
 
-const correctAnswerToWin = 3;
+const COUNT_CORRECT_ANSWER_TO_WIN = 3;
 
-export default (titleRulesOfTheGame, getQuestionParam, getCorrectAnswer) => () => {
+export default (titleRulesOfTheGame, getQuestionAndAnswer) => () => {
   const userName = greeting();
 
   console.log(titleRulesOfTheGame);
   let countCorrectAnswer = 0;
   do {
-    const question = getQuestionParam();
+    const { question, answer } = getQuestionAndAnswer();
 
     console.log(`Question: ${question}`);
-    const correctAnswer = getCorrectAnswer(question);
-    const answer = ask('You answer: ');
+    const userAnswer = ask('You answer: ');
 
-    if (answer === correctAnswer) {
+    if (userAnswer === answer) {
       console.log('Correct!');
       countCorrectAnswer += 1;
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${userName}!`);
     }
-  } while (countCorrectAnswer !== correctAnswerToWin);
+  } while (countCorrectAnswer !== COUNT_CORRECT_ANSWER_TO_WIN);
 
   console.log(`Congratulations, ${userName}!`);
 };
