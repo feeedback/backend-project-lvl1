@@ -19,7 +19,7 @@ const getQuestionParam = (minNum = 0, maxNum = 20) => {
 const getCorrectAnswer = (mathExpression) => {
   const [x, operation, y] = mathExpression.split(' ');
 
-  return mapMathOperationsToFn[operation](x, y);
+  return String(mapMathOperationsToFn[operation](Number(x), Number(y)));
 };
 
 export default createGame(
