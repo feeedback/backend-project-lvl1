@@ -5,3 +5,5 @@ export const getRandomIntegerInRange = (min, max) => {
   const diff = max - min + 1;
   return () => Math.floor(Math.random() * diff) + min;
 };
+
+export const gcd = (x, y) => (x ? gcd(y % x, x) : y);
