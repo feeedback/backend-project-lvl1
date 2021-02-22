@@ -1,5 +1,5 @@
 // import greeting from '../src/greeting.js';
-import { getRandomIntegerInRange, isEven } from '../src/utils.js';
+import { getRandomIntegerInRange } from '../src/utils.js';
 // import { ask } from '../src/cli.js';
 import createGame from '../src/createGame.js';
 

@@ -16,4 +16,4 @@ rules:
   import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
   no-underscore-dangle: [2, { 'allow': ['__filename', '__dirname'] }]
   linebreak-style: 0
-  comma-dangle: [2, { 'functions': 'never', 'object': 'always-multiline' }]
+  comma-dangle: [2, { 'objects': 'always-multiline', 'functions': 'never' }]
