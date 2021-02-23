@@ -15,5 +15,5 @@ rules:
   no-console: 0
   import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
   no-underscore-dangle: [2, { 'allow': ['__filename', '__dirname'] }]
-  linebreak-style: 0
-  comma-dangle: [2, { 'objects': 'always-multiline', 'functions': 'never' }]
+  # linebreak-style: 0
+  # comma-dangle: [2, { 'objects': 'always-multiline', 'functions': 'never' }] # потому что, всё равно eslint в CI hexlet-check берется их конфигурация и не проходит проверку

@@ -12,5 +12,5 @@ const getQuestionAndAnswer = (minNum = 0, maxNum = 100) => {
 
 export default createGame(
   'Answer "yes" if given number is prime. Otherwise answer "no".',
-  getQuestionAndAnswer
+  getQuestionAndAnswer,
 );
