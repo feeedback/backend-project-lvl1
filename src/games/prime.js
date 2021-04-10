@@ -1,5 +1,5 @@
-import { getRandomIntegerInRange, isPrime } from '../src/utils.js';
-import createGame from '../src/createGame.js';
+import { getRandomIntegerInRange, isPrime } from '../utils.js';
+import createGame from '../createGame.js';
 
 const getQuestionAndAnswer = (minNum = 0, maxNum = 100) => {
   const num = getRandomIntegerInRange(minNum, maxNum)();

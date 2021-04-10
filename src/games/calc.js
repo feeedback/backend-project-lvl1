@@ -1,5 +1,5 @@
-import { getRandomIntegerInRange } from '../src/utils.js';
-import createGame from '../src/createGame.js';
+import { getRandomIntegerInRange } from '../utils.js';
+import createGame from '../createGame.js';
 
 const mapMathOperationsToFn = {
   '+': (x, y) => x + y,

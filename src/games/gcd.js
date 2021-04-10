@@ -1,5 +1,5 @@
-import { getRandomIntegerInRange, gcd } from '../src/utils.js';
-import createGame from '../src/createGame.js';
+import { getRandomIntegerInRange, gcd } from '../utils.js';
+import createGame from '../createGame.js';
 
 const getQuestionAndAnswer = (minNum = 0, maxNum = 100) => {
   const getNum = getRandomIntegerInRange(minNum, maxNum);

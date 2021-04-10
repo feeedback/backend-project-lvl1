@@ -1,5 +1,5 @@
-import { getRandomIntegerInRange } from '../src/utils.js';
-import createGame from '../src/createGame.js';
+import { getRandomIntegerInRange } from '../utils.js';
+import createGame from '../createGame.js';
 
 const PROGRESSION_LENGTH_MIN = 5;
 const PROGRESSION_LENGTH_MAX = 15;

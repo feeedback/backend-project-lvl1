@@ -3,8 +3,8 @@ import { ask } from './cli.js';
 
 const COUNT_CORRECT_ANSWER_TO_WIN = 3;
 
-export default (titleRulesOfTheGame, getQuestionAndAnswer) => () => {
-  const userName = greeting();
+export default (titleRulesOfTheGame, getQuestionAndAnswer) => (userNameFromParams) => {
+  const userName = userNameFromParams ?? greeting();
 
   console.log(titleRulesOfTheGame);
   let countCorrectAnswer = 0;
