@@ -17,7 +17,7 @@
 
 _Пример игры:_
 
-```
+```bash
 $ brain-progression
 Welcome to the Brain Game!
 What number is missing in this progression?
